@@ -5,7 +5,9 @@ export const SetItem = () => {
     content.addEventListener('focusout', (e) => {
       contentArray.forEach((content) => {
         const text: string = content.textContent as string;
-        localStorage.setItem(text, text);
+        if (text !== '') {
+          localStorage.setItem(text, text);
+        }
       });
     });
   });
