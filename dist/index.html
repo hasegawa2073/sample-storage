@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoの追加機能サンプル</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="todo">
+        <ul class="todo__ul" aria-live="assertive" aria-atomic="false">
+          <li class="todo__li" aria-label="Todoリスト">
+            <button class="todo__button" aria-label="Todoの完了ボタン"></button>
+            <p class="todo__text" contenteditable="true">図書館に本を返す</p>
+          </li>
+          <li class="todo__li" aria-label="Todoリスト">
+            <button class="todo__button" aria-label="Todoの完了ボタン"></button>
+            <p class="todo__text" contenteditable="true">散歩する</p>
+          </li>
+        </ul>
+      </section>
+      <section class="add">
+        <button class="add__button" aria-label="Todoの追加ボタン"></button>
+      </section>
+    </main>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

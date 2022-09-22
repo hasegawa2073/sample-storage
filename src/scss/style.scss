@@ -1,0 +1,87 @@
+:root {
+  --base-font-family: 'Noto Sans JP', sans-serif;
+  --done-button-size: 22px;
+  --add-button-size: 58px;
+  --dark-gray: #4e4e4e;
+  --gray: #bcbcbc;
+  --light-gray: #e5e5e5;
+  --blue: #4391fa;
+}
+html {
+  font-size: 62.5%;
+}
+
+.todo {
+  &__ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  &__li {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+  &__button {
+    margin-right: 15px;
+    width: var(--done-button-size);
+    height: var(--done-button-size);
+    border: 1px solid var(--gray);
+    border-radius: 50%;
+    background-color: transparent;
+  }
+  &__text {
+    position: relative;
+    margin: 0;
+    padding: 16px 0;
+    width: 100%;
+    font-family: var(--base-font-family);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--dark-gray);
+    outline: none;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: var(--light-gray);
+    }
+  }
+}
+.add {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: inline-block;
+  &__button {
+    position: relative;
+    padding: 0;
+    width: var(--add-button-size);
+    height: var(--add-button-size);
+    background-color: var(--blue);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.25);
+    cursor: pointer;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      display: block;
+      width: 18px;
+      height: 2px;
+      background-color: #ffffff;
+      border-radius: 2px;
+    }
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+}
