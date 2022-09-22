@@ -1,5 +1,7 @@
+import { ClearItem } from '../ClearItem/ClearItem.js';
 import { FocusList } from '../FocusList/FocusList.js';
 import { RemoveEmptyList } from '../RemoveEmptyList/RemoveEmptyList.js';
+import { SetItem } from '../SetItem/SetItem.js';
 export const AddList = () => {
     const todoUl = document.querySelector('.todo__ul');
     const addButton = document.querySelector('.add__button');
@@ -11,6 +13,8 @@ export const AddList = () => {
   `;
     addButton?.addEventListener('click', (e) => {
         todoUl?.insertAdjacentHTML('beforeend', todoLiHtml);
+        ClearItem();
+        SetItem();
         FocusList();
         RemoveEmptyList();
     });
